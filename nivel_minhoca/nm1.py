@@ -1,6 +1,13 @@
-# Crie um programa que solicite um nome completo ao usuário e formate-o de forma que todas as palavras comecem com letra maiúscula e o restante seja minúsculo e exiba-o na tela.
-
 def formatar_nome(nome):
+    """
+    Formata o nome completo, colocando a primeira letra de cada palavra em maiúscula e as demais em minúscula.
+
+    Args:
+        nome (str): O nome completo a ser formatado.
+
+    Returns:
+        str: O nome formatado, com cada palavra começando com letra maiúscula.
+    """
     nome = nome.title()
     return nome
 
