@@ -1,6 +1,16 @@
-# Desenvolva um programa que solicite ao usuário uma frase e imprima o número de caracteres, de palavras e de espaços em branco nesta frase.
-
 def contar_caracteres_palavras_espacos(frase):
+    """
+    Conta o número de caracteres, palavras e espaços em branco em uma frase.
+
+    Args:
+        frase (str): A frase cuja análise será feita.
+
+    Returns:
+        tuple: Uma tupla contendo:
+            - caracteres (int): Número total de caracteres na frase, incluindo espaços.
+            - palavras (int): Número de palavras na frase.
+            - espacos (int): Número de espaços em branco na frase.
+    """
     caracteres = len(frase)
     palavras = len(frase.split())
     espacos = frase.count(" ")
