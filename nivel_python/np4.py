@@ -1,20 +1,30 @@
-"""
-Um escritório de advocacia deseja automatizar parte do processo de análise de contratos, extraindo informações relevantes de documentos longos.
-
-Desenvolva um programa que receba o texto completo de um contrato e extraia todas as cláusulas que mencionem valores monetários. Os valores devem ser identificados e exibidos em uma lista separada.
-
-Implemente uma função que, dada uma lista de termos legais, verifique quantas vezes cada termo aparece no contrato e exiba as ocorrências em ordem decrescente de frequência.
-"""
-
 import re
 
 def extrair_valores_monetarios(contrato):
+    """
+    Extrai valores monetários de um contrato.
+    
+    Args:
+        contrato (str): Texto completo do contrato.
+    
+    Returns:
+        list: Lista de valores monetários.
+    """
     valores_monetarios = re.findall(r'R\$\s?\d+(?:\.\d{3})*(?:,\d+)?', contrato)
     
     return valores_monetarios
 
 def extrair_termos_legais(contrato, termos_legais):
-   
+    """
+    Extrai termos legais de um contrato.
+    
+    Args:
+        contrato (str): Texto completo do contrato.
+        termos_legais (list): Lista de termos legais a serem extraídos.
+    
+    Returns:
+        dict: Dicionário com a contagem de ocorrências de cada termo legal.
+    """
     contagem_termos = {termo: contrato.lower().count(termo.lower()) for termo in termos_legais}
     contagem_termos = {termo: contagem for termo, contagem in sorted(contagem_termos.items(), key=lambda item: item[1], reverse=True)}
     
