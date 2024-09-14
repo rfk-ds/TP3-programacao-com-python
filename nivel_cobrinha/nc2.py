@@ -1,6 +1,13 @@
-# Implemente uma função que receba uma string representando uma data no formato "dd/mm/aaaa" e retorne a data em um formato textual, por exemplo, "25/12/2024" -> "Vinte e cinco de dezembro de dois mil e vinte e quatro".
-
 def data_por_extenso(data):
+    """
+    Converte uma data fornecida no formato 'dd/mm/aaaa' para sua forma por extenso, incluindo o dia, o mês e o ano.
+
+    Args:
+        data (str): A data no formato 'dd/mm/aaaa' (ex: "25/12/2024").
+
+    Returns:
+        str: A data por extenso no formato 'dia de mês de ano', onde o dia e o ano são escritos por extenso.
+    """
     dia, mes, ano = data.split("/")
     meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
     unidades = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"]
