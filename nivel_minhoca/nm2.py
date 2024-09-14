@@ -1,6 +1,15 @@
-# Crie um script em Python que substitua todas as ocorrências de uma palavra específica em uma frase por outra palavra fornecida pelo usuário. Utilize um texto de exemplo de sua preferência e escolha a palavra a ser substituída, mas a lógica precisa funcionar para outros casos.
-
 def substituir_palavra(frase, palavra_antiga, palavra_nova):
+    """
+    Substitui todas as ocorrências de uma palavra específica em uma frase por outra palavra fornecida.
+
+    Args:
+        frase (str): A frase onde as substituições serão realizadas.
+        palavra_antiga (str): A palavra que será substituída.
+        palavra_nova (str): A nova palavra que substituirá a palavra antiga.
+
+    Returns:
+        str: A frase resultante com todas as ocorrências da palavra antiga substituídas pela palavra nova.
+    """
     frase = frase.replace(palavra_antiga, palavra_nova)
     return frase
 
