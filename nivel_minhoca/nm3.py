@@ -1,5 +1,3 @@
-# Escreva uma função que receba um texto e retorne a palavra mais longa presente nele, desconsiderando pontuação.
-
 def palavra_mais_longa(texto):
     """
     Encontra e retorna a palavra mais longa em um texto. Remove pontuações como vírgulas,
